@@ -1,4 +1,5 @@
 A4 Object Measurement with Webcam
+
 This Python project allows users to measure the dimensions of objects placed on an A4 sheet using a webcam. The program uses OpenCV to detect contours and warp the image for accurate dimension calculation. It also includes a calibration step to map pixel measurements to real-world units (centimeters) using a standard A4 sheet.
 
 
@@ -11,7 +12,7 @@ Scale storage: Saves the calculated scale (pixel-to-centimeter ratio) for future
 
 
 Requirements:
-Python 3.x: Make sure Python 3.x is installed on your system.
+Python 3.0: Make sure Python 3.0 or above is installed on your system.
 OpenCV: For computer vision operations (contour detection, image warping, etc.).
 JSON: For storing and loading calibration data.
 Utlis: A custom utility module (presumed to be part of the project) that includes functions for contour detection, image warping, and distance calculations.
