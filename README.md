@@ -1,31 +1,51 @@
-A4 Object Measurement with Webcam
+# 📏 A4 Object Measurement with Webcam
 
-This Python project allows users to measure the dimensions of objects placed on an A4 sheet using a webcam. The program uses OpenCV to detect contours and warp the image for accurate dimension calculation. It also includes a calibration step to map pixel measurements to real-world units (centimeters) using a standard A4 sheet.
+This Python project enables users to measure the dimensions of objects placed on an A4 sheet using a webcam. It utilizes **OpenCV** for contour detection and image warping to ensure precise dimension calculations. The program includes a calibration step to map pixel measurements to real-world units (centimeters) using a standard A4 sheet.
 
+---
+## ✨ Features
+- **Webcam Integration** - Captures live video feed for real-time measurement.
+- **A4 Sheet Calibration** - Automatically detects an A4 sheet to calibrate pixel-to-centimeter conversion.
+- **Real-time Object Measurement** - Measures objects placed on an A4 sheet and displays dimensions in centimeters.
+- **Contours Detection** - Detects and highlights object contours.
+- **Scale Storage** - Saves pixel-to-centimeter ratio for future use.
 
-Features:
-Webcam integration: Uses a webcam to capture live video feed.
-A4 sheet calibration: Automatically calibrates the system based on the A4 sheet dimensions to provide accurate measurements.
-Real-time object measurement: Measures objects placed on an A4 sheet and displays their dimensions in centimeters.
-Contours detection: Detects and displays contours of objects on the A4 sheet.
-Scale storage: Saves the calculated scale (pixel-to-centimeter ratio) for future use.
+---
+## 📌 Requirements
+Ensure you have the following installed:
+- **Python 3.0+**
+- **OpenCV** (`pip install opencv-python`)
+- **JSON** (built-in module for storing calibration data)
+- **Utils Module** (Custom utility module for contour detection, image warping, and distance calculations)
 
+---
+## ⚙️ How It Works
+### 1️⃣ **Calibration Step**
+- When the program starts, it checks for `calibration_data.json`.
+- If missing, it prompts you to place an **A4 sheet** in front of the webcam.
+- The program detects the sheet and stores calibration data.
 
-Requirements:
-Python 3.0: Make sure Python 3.0 or above is installed on your system.
-OpenCV: For computer vision operations (contour detection, image warping, etc.).
-JSON: For storing and loading calibration data.
-Utlis: A custom utility module (presumed to be part of the project) that includes functions for contour detection, image warping, and distance calculations.
+### 2️⃣ **Measuring Objects**
+- Place any object on the A4 sheet.
+- The program detects the object's contours and calculates its **width and height in centimeters**.
+- Measurements are displayed in real time on the screen.
 
+### 3️⃣ **Exit the Program**
+- Press **'q'** to exit.
 
-How It Works:
-Calibration Step:
-When you run the program, it will check if a calibration file (calibration_data.json) exists.
-If the file is not found, the program will prompt you to place an A4 sheet in front of the webcam. The program will automatically detect the A4 sheet, and the calibration data will be saved to a file.
-Measurement of Objects:
+---
+## 🚀 Running the Project
+```bash
+python object_measurement.py
+```
+Ensure your webcam is connected before running the script.
 
-After calibration, place any object on the A4 sheet.
-The program will detect the contours of the objects and measure their dimensions (width and height) in centimeters, which will be displayed on the screen in real-time.
+---
+## 🛠 Troubleshooting
+- **Calibration Issues?** Ensure proper lighting and a clear A4 sheet.
+- **Contours Not Detected?** Adjust contrast or background to improve visibility.
+- **Webcam Not Working?** Check permissions and ensure OpenCV is correctly installed.
 
-Exit:
-To exit the program, press the q key.
+---
+🚀 **Happy Measuring!** 🎉
+
